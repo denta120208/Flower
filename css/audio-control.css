@@ -1,0 +1,62 @@
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.music-control:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.music-control i {
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.music-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+/* Animation for button disappearing */
+.music-control.fade-out {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .music-control {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 15px;
+    }
+    
+    .music-control i {
+        font-size: 18px;
+    }
+    
+    .music-text {
+        font-size: 12px;
+    }
+}
