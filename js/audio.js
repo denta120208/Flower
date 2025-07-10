@@ -16,7 +16,9 @@ const audioPlayer = {
                 musicControl.style.display = 'none';
                 audio.currentTime = audioTime;
                 audio.muted = false;
-                audio.play();
+                audio.play().catch(error => {
+                    console.log('Failed to play:', error);
+                });
                 localStorage.setItem('musicPlaying', 'true');
             } else {
                 // Show button
